@@ -10,6 +10,7 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import VelocityMarquee from "@/components/VelocityMarquee";
 
 export default function Home() {
   const [showTerminal, setShowTerminal] = useState(true);
@@ -46,27 +47,21 @@ export default function Home() {
             <Hero />
           </section>
 
-          {/* Marquee Ticker Divider */}
-          <div className="w-full overflow-hidden border-y border-white/5 py-4 bg-background/50 backdrop-blur-sm">
-            <div className="animate-marquee whitespace-nowrap flex gap-12 text-sm font-mono uppercase tracking-[0.3em] text-neutral-600">
-              {[...Array(2)].map((_, i) => (
-                <span key={i} className="flex gap-12 items-center">
-                  <span>Flutter Architect</span>
-                  <span className="text-accent">◆</span>
-                  <span>Mobile Engineer</span>
-                  <span className="text-accent">◆</span>
-                  <span>React Developer</span>
-                  <span className="text-accent">◆</span>
-                  <span>UI/UX Obsessive</span>
-                  <span className="text-accent">◆</span>
-                  <span>Product Thinker</span>
-                  <span className="text-accent">◆</span>
-                  <span>Dart Specialist</span>
-                  <span className="text-accent">◆</span>
-                </span>
-              ))}
-            </div>
-          </div>
+          {/* Interactive Velocity Marquee */}
+          <VelocityMarquee baseVelocity={-2}>
+            <span>Flutter Architect</span>
+            <span className="text-accent">◆</span>
+            <span>Mobile Engineer</span>
+            <span className="text-accent">◆</span>
+            <span>React Developer</span>
+            <span className="text-accent">◆</span>
+            <span>UI/UX Obsessive</span>
+            <span className="text-accent">◆</span>
+            <span>Product Thinker</span>
+            <span className="text-accent">◆</span>
+            <span>Dart Specialist</span>
+            <span className="text-accent">◆</span>
+          </VelocityMarquee>
 
           {/* About */}
           <section id="about" className="w-full relative">

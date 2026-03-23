@@ -3,6 +3,7 @@
 import React, { useRef, useState } from "react";
 import { motion, useSpring, useScroll, useTransform } from "framer-motion";
 import { FiArrowDownRight } from "react-icons/fi";
+import TextReveal from "@/components/TextReveal";
 
 export default function Hero() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -50,14 +51,11 @@ export default function Hero() {
                     style={{ y: nameY }}
                     className="overflow-hidden"
                 >
-                    <motion.h1
-                        initial={{ y: "100%" }}
-                        animate={{ y: "0%" }}
-                        transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                        className="font-display text-[14vw] md:text-[9vw] font-black tracking-[-0.04em] text-primary leading-[0.85] uppercase"
-                    >
-                        Jeremiah
-                    </motion.h1>
+                    <TextReveal 
+                        text="Jeremiah" 
+                        delay={0.1}
+                        className="font-display text-[14vw] md:text-[9vw] font-black tracking-[-0.04em] text-primary leading-[0.85] uppercase" 
+                    />
                 </motion.div>
 
                 <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
@@ -66,14 +64,11 @@ export default function Hero() {
                         style={{ y: subtitleY }}
                         className="overflow-hidden md:ml-[8vw]"
                     >
-                        <motion.h1
-                            initial={{ y: "100%" }}
-                            animate={{ y: "0%" }}
-                            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                        <TextReveal 
+                            text="Opoku-B." 
+                            delay={0.4}
                             className="font-display text-[14vw] md:text-[9vw] font-black tracking-[-0.04em] leading-[0.85] uppercase text-neutral-700 italic"
-                        >
-                            Opoku-B.
-                        </motion.h1>
+                        />
                     </motion.div>
 
                     {/* Right-aligned descriptor */}

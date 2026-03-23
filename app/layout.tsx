@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Syne, Space_Grotesk } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor";
+import SmoothScroll from "@/components/SmoothScroll";
+import CommandPalette from "@/components/CommandPalette";
 import "./globals.css";
 
 const syne = Syne({
@@ -29,8 +31,11 @@ export default function RootLayout({
         className={`${syne.variable} ${spaceGrotesk.variable} antialiased bg-background text-foreground selection:bg-accent selection:text-background font-sans cursor-none`}
         suppressHydrationWarning
       >
-        <CustomCursor />
-        {children}
+        <SmoothScroll>
+          <CustomCursor />
+          <CommandPalette />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

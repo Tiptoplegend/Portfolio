@@ -4,18 +4,18 @@
   --font-sans: var(--font-space-grotesk);
   --font-display: var(--font-syne);
 
-  /* V2 Editorial Palette */
-  --color-primary: #ebeaec;
-  --color-secondary: #0c0c0c;
-  --color-accent: #ff3300;
+  /* Bioluminescent Ocean Palette */
+  --color-primary: #e2e8f0;
+  --color-secondary: #0b0e14;
+  --color-accent: #00ffcc;
 
-  --color-background: #0c0c0c;
-  --color-foreground: #ebeaec;
+  --color-background: #0b0e14;
+  --color-foreground: #e2e8f0;
 }
 
 :root {
-  --background: #0c0c0c;
-  --foreground: #ebeaec;
+  --background: #0b0e14;
+  --foreground: #e2e8f0;
 }
 
 html {
@@ -44,22 +44,22 @@ button,
 }
 
 ::-webkit-scrollbar-track {
-  background: #0c0c0c;
+  background: #0b0e14;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1a1a1a;
+  background: #1e293b;
   border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff3300;
+  background: #00ffcc;
 }
 
 /* Stark text selection */
 ::selection {
-  background-color: #ff3300;
-  color: #0c0c0c;
+  background-color: #00ffcc;
+  color: #0b0e14;
 }
 
 /* ============================================
@@ -80,7 +80,7 @@ button,
 .sketch-highlight {
   position: relative;
   display: inline-block;
-  color: #ff3300;
+  color: #00ffcc;
 }
 
 .sketch-highlight::after {
@@ -90,7 +90,7 @@ button,
   bottom: -2px;
   width: 110%;
   height: 8px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q25,0 50,5 T100,5' stroke='%23ff3300' stroke-width='2.5' fill='none' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q25,0 50,5 T100,5' stroke='%2300ffcc' stroke-width='2.5' fill='none' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
   background-size: 100% 100%;
   z-index: -1;
 }
@@ -153,6 +153,6 @@ button,
 }
 
 .text-stroke-accent {
-  -webkit-text-stroke: 1.5px rgba(255, 51, 0, 0.25);
+  -webkit-text-stroke: 1.5px rgba(0, 255, 204, 0.25);
   color: transparent;
 }

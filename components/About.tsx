@@ -80,14 +80,17 @@ export default function About() {
                         </svg>
                     </motion.div>
 
-                    {/* Right: Body Text */}
+                    {/* Right: Body Text (Glassmorphic Bento) */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-                        className="w-full md:w-3/5 flex flex-col gap-8 font-sans text-lg md:text-xl text-neutral-400 font-light leading-[1.8]"
+                        className="w-full md:w-3/5 flex flex-col gap-8 font-sans text-lg md:text-xl text-neutral-400 font-light leading-[1.8] relative rounded-[2rem] bg-neutral-900/40 backdrop-blur-xl border border-white/5 p-8 md:p-12 overflow-hidden interactive"
                     >
+                        <div className="absolute inset-0 noise-bg opacity-[0.03] mix-blend-overlay pointer-events-none" />
+                        
+                        <div className="relative z-10 flex flex-col gap-8">
                         <p>
                             I specialize in architecting high-performance, cross-platform mobile products using{" "}
                             <strong className="text-primary font-semibold">Flutter</strong> and{" "}
@@ -102,7 +105,7 @@ export default function About() {
                         </p>
 
                         {/* Stats row */}
-                        <div className="grid grid-cols-3 gap-8 mt-8 pt-8 border-t border-white/5">
+                        <div className="grid grid-cols-3 gap-8 mt-4 pt-8 border-t border-white/5">
                             {[
                                 { value: "5+", label: "Years" },
                                 { value: "20+", label: "Projects" },
@@ -119,11 +122,12 @@ export default function About() {
                                     <span className="font-display text-3xl md:text-4xl font-black text-primary tracking-tight">
                                         {stat.value}
                                     </span>
-                                    <span className="font-mono text-[10px] text-neutral-600 uppercase tracking-[0.2em] mt-1">
+                                    <span className="font-mono text-[10px] text-neutral-600 uppercase tracking-[0.2em] mt-2 bg-white/5 inline-block w-max px-2 py-1 rounded-sm">
                                         {stat.label}
                                     </span>
                                 </motion.div>
                             ))}
+                        </div>
                         </div>
                     </motion.div>
 
